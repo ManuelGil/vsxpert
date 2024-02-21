@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets'
+
+const clients = [
+  {
+    ref: 'https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nextjs-generator',
+    image: 'https://raw.githubusercontent.com/ManuelGil/vscode-nextjs-generator/main/icon.png',
+    name: 'T3 Stack / NextJS / ReactJS File Generator'
+  },
+  {
+    ref: 'https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-nestjs-generator',
+    image: 'https://raw.githubusercontent.com/ManuelGil/vscode-nestjs-generator/main/icon.png',
+    name: 'NestJS File Generator for VSCode'
+  },
+  {
+    ref: 'https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-angular-generator',
+    image: 'https://raw.githubusercontent.com/ManuelGil/vscode-angular-generator/main/icon.png',
+    name: 'Angular File Generator for VSCode'
+  },
+  {
+    ref: 'https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-codeigniter4-spark',
+    image: 'https://raw.githubusercontent.com/ManuelGil/vscode-codeigniter4-spark/main/icon.png',
+    name: 'CodeIgniter 4 Spark'
+  }
+]
+---
+
+<!-- ====== Brands Section Start -->
+<section class="pb-20 dark:bg-dark">
+  <div class="container px-4">
+    <div class="-mx-4 flex flex-wrap">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-12 max-w-[485px] text-center lg:mb-[70px]">
+          <span class="mb-2 block text-lg font-semibold text-primary"> Showcase </span>
+          <h2
+            class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
+          >
+            Extension Using Our Templates
+          </h2>
+          <p class="text-base text-body-color dark:text-dark-6">
+            Our engineering team has developed a set of extensions for Visual Studio Code that are being used by thousands of developers around the world.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="-mx-4 flex flex-wrap items-center justify-center gap-16 xl:gap-28">
+      {
+        clients.map((client) => (
+          <a href={client.ref} target="_blank" rel="nofollow noopner">
+            <Image
+              src={client.image}
+              alt={client.name}
+              loading="lazy"
+              width="24"
+              height="24"
+              class="h-24 w-24"
+            />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
+<!-- ====== Brands Section End -->
