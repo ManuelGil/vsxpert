@@ -5,7 +5,7 @@ import { defineConfig, passthroughImageService } from 'astro/config'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'http://vsxpert.tech/',
+  site: 'https://vsxpert.tech/',
   base: '/',
   image: {
     service: passthroughImageService()
